@@ -1,0 +1,280 @@
+/* Main image reveal */
+#messi{
+    opacity: 0;
+    transform: scale(1.8) translate(50px);
+
+    animation: messiReveal 1.2s ease forwards;
+}
+@keyframes messiReveal {
+    to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+/*heading reveal*/
+#heading{
+    opacity: 0;
+    transform: translateY(50px);
+
+    animation: headingReveal 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes headingReveal {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*button reveal*/
+#firstbtn{
+    opacity: 0;
+    transform: translateY(40px);
+
+    animation: firstbtnReveal 1s ease forwards;
+    animation-delay: 1s;
+}
+@keyframes firstbtnReveal {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*revealing the navbar and other cards*/
+.card{
+    opacity: 0;
+    transform: translateY(50px);
+    animation: show 0.8s forwards;
+}
+
+#card1{
+    animation-delay: .2s;
+}
+#card2{
+    animation-delay: .5s;
+}
+#card3{
+    animation-delay: .8s;
+}
+@keyframes show {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.fade-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-section.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* mobile burger navigation */
+.mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #1f2937;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+#mobileMenu {
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 1rem;
+}
+
+#mobileMenu .mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#mobileMenu .mobile-menu-links a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    #mobileMenu.open {
+        display: flex;
+    }
+}
+
+
+
+.hidden{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease;
+}
+.show{
+    opacity: 1;
+    transform:translateY(0);
+}
+
+/*fuild text
+export :default{
+    theme:{
+        extend:{
+            fontSize: {
+                'fluid-sm':'clamp(1rem, 2vw, 1,25rem)',
+                'fluid-md': 'clamp(1.5rem, 4vw, 3rem)',
+                'fluid-lg': 'clamp(3rem, 8vw, 8rem)',
+            }
+        }
+    }
+}*/
+
+/* Hover gallery: stack images and fade between them on hover */
+.hover-gallery{
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.hover-gallery img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .45s ease, transform .6s ease;
+}
+.hover-gallery img:first-child{
+    opacity: 1;
+}
+.hover-gallery:hover img{
+    transform: scale(1.05);
+}
+
+.added-to-cart {
+  color: rgb(6, 125, 98);
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+
+  /* At first, the "Added to cart" message will
+     be invisible. Use JavaScript to change the
+     opacity and make it visible. */
+  opacity: 0;
+}
+
+/* Dark mode palette and elevated card styling */
+:root {
+    color-scheme: light;
+    --bg-body: #f5f7fb;
+    --bg-card: #ffffff;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --border-soft: rgba(255, 255, 255, 0.18);
+    --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+body {
+    background: var(--bg-body);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    color-scheme: dark;
+    --bg-body: #000000;
+    --bg-card: #000000;
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    --border-soft: rgba(255, 255, 255, 0.16);
+    --shadow-soft: 0 10px 25px rgba(255, 255, 255, 0.06);
+}
+
+body.dark .card,
+body.dark .product-box,
+body.dark .bg-base-100,
+body.dark .bg-base-200,
+body.dark .rounded-xl,
+body.dark .rounded-3xl {
+    box-shadow: 0 0 0 1px var(--border-soft), var(--shadow-soft);
+    border: 1px solid var(--border-soft);
+    background-color: #000000 !important;
+}
+
+body.dark .bg-base-100,
+body.dark .bg-base-200 {
+    background-color: #000000 !important;
+}
+
+body.dark .text-gray-500,
+body.dark .text-gray-400 {
+    color: var(--text-muted) !important;
+}
+
+body.dark .bg-[#dfe6e9] {
+    background-color: #000000 !important;
+}
+
+body.dark .bg-lime-100 {
+    background-color: #000000 !important;
+    color: #f8fafc;
+}
+
+body.dark .btn-neutral {
+    background-color: #111111;
+    color: #f8fafc;
+}
+
+body.dark .input,
+body.dark .input-bordered,
+body.dark input,
+body.dark textarea,
+body.dark select {
+    background-color: #000000 !important;
+    color: #f8fafc !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.dark .join-item {
+    background-color: #000000 !important;
+    color: #f8fafc !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.dark .mobile-menu-btn {
+    color: #f8fafc;
+}
+
+body.dark #mobileMenu {
+    background: rgba(15, 23, 42, 0.96);
+}
+
+body.dark #mobileMenu a {
+    color: #f8fafc;
+}

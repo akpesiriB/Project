@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Get fit</title>
+</head>
+
+<body>
+    <section class="fade-section max-w-8xl mx-auto  px-4 bg-[#dfe6e9] mt-3 ml-3 mr-3 mb--3
+tracking-tight
+leading-none rounded-xl h-[96vh] overflow-hidden mb-5 " id="home">
+        <header id="card1" class="card">
+            <div class="md:flex justify-between items-center">
+                <!--nav left-->
+                <nav class=" text-[10px] flex gap-9 pt-5 font-semibold nav-links">
+                    <a href="#product1" class="hover:text-white hover:border-b">SHOP</a>
+                    <a href="" class="hover:text-white hover:border-b">MEN</a>
+                    <a href="" class="hover:text-white hover:border-b">WOMEN</a>
+                    <a href="#trending" class="hover:text-white hover:border-b">TRENDING</a>
+                </nav>
+
+                <!---CENTER LOGO-->
+                <a href="#home">
+                    <h1 class="bg-white text-[30px] w-[180px] text-center -skew-x-12 font-bold sticky z-50 top-0 md: mb-5 "
+                        style="font-family:cursive;">
+                        VEXO</h1>
+                </a>
+
+                <!---RIGHT + burger-->
+                <div class="flex items-center gap-4 justify-end">
+                    <nav class="text-[10px] flex gap-9 pt-5 font-semibold nav-links">
+                        <a href="" class="hover:text-white hover:border-b">SEASONAL</a>
+                        <a href="#accessories" class="hover:text-white hover:border-b">ACCESSORIES</a>
+                        <a href="" class="hover:text-white hover:border-b">SIGN-UP</a>
+
+                        <a class="cart-link flex flex-col items-center header-link" href="cart.html">
+                            <div class="cart-quantity hidden js-cart-quantity">0</div>
+                            <img class="cart-icon w-[20px] " src="img/cart-icon.png">
+
+                        </a>
+                    </nav>
+                    <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+                <nav class="mobile-menu-links">
+                    <a href="">SHOP</a>
+                    <a href="">MEN</a>
+                    <a href="">WOMEN</a>
+                    <a href="#trending">TRENDING</a>
+                </nav>
+                <nav class="mobile-menu-links">
+                    <a href="">SEASONAL</a>
+                    <a href="">ACCESSORIES</a>
+                    <a href="">SIGN-UP</a>
+                    <a class="cart-link header-link" href="cart.html">
+                        <div class="cart-quantity js-cart-quantity">0</div>
+                        <img class="cart-icon" src="img/cart-icon.png">
+
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero section with navigation, headline, and the main call-to-action area -->
+        <div class="mt-10 flex flex-col items-center sm: gap-5 md:mt-0 md:gap-0">
+            <h1 class="absolute relative z-10 opacity-10 text-center text-[30px] md:text-[60px]  " id="heading">GEAR UP
+                EVERY SEASON
+                <br> EVERY
+                <span class="text-blue-400" style="font-family:cursive;"> MATCH!</span>
+            </h1>
+            <div id="firstbtn">
+                <a href="#product1"
+                    class="hover:bg-white hover:text-black  bg-black text-white rounded-xl text-[10px] px-4 py-2">SHOP
+                    NOW</a>
+                <a href="#carl2"
+                    class="hover:bg-black hover:text-white  bg-white rounded-xl text-[10px] px-4 py-2">EXPLORE
+                    ALL</a>
+            </div>
+            <!-- Dark mode toggle button placed in the hero content to switch the page theme -->
+            <div class="flex-col items-center justify-center  sm:flex  md:justify-center flex-row  md:items-center md:gap-30" id="mask">
+                <h2 class="hidden md:text-[10px] md:block card" id="card2">Stay cozy without compromising <br>
+                    your range of motion, our
+                    woman's winter <br> range is perfect for those chilly outdoor <br>workouts.</h2>
+                <img src="img/mes1.png" alt="" class="h-[60vh] object-fit sm:w-[400px] sm:h-[70vh] sm:object-contain md:w-[400px]" id="messi">
+                <button id="darkModeToggle" type="button" class="rounded-lg border border-white/50 bg-white/80 p-1 shadow-sm transition hover:scale-105" aria-label="Toggle dark mode" aria-pressed="false">
+                    <img src="img/addidas blue.jpg" alt="Toggle dark mode"
+                        class="rounded-lg w-[80px] h-[100px] md:w-[180px] object-cover card" id="card3">
+                </button>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <!---<a class="cart-link header-link" href="checkout.html">
+        <img class="cart-icon" src="images/icons/cart-icon.png">
+        <div class="cart-quantity js-cart-quantity">0</div>
+        <div class="cart-text">Cart</div>
+      </a> -->
+    <!-- Trending gallery section with hover-driven image switching -->
+    <section
+        class=" w-full h-auto bg-gradient-to-b from-[#dfe6e9]  to-white  tracking-tight leading-none  overflow-hidden sm:h-fit py-10 px-4 md: h-[96vh] "
+        id="trending">
+
+        <!--main cont-->
+        <div class=" space-y-10 rounded-xl py-10 px-10  md:flex gap-10 items-center justify-self-center">
+            <div class="text-center flex flex-col md:gap-10">
+                <!--hover gallery with  card-->
+                <div class="card card-sm bg-base-200 max-w-80 fade-section shadow">
+                    <figure class="hover-gallery">
+                        <img src="img/dort first.jpg">
+                        <img src="img/dort front.jpg">
+                        <img src="img/dort3.jpg">
+                        <img src="img/dort2.jpg">
+                    </figure>
+
+                </div>
+
+                <h2 class="text-[10px] mt-6 card" id="card2">Performance driven gear for <br> men - built for summer
+                    heat and
+                    <br> Winter Cold.
+                </h2>
+
+            </div>
+            <!--img-->
+            <figure class="hover-gallery max-w-120 fade-section">
+                <img src="img/1338735.png" alt="proj1">
+                <img src="img/971236.jpg" alt="locked-screen">
+                <img src="img/716405.jpg" alt="716405">
+                <img src="img/39539615-lionel-messi-desktop-wallpaper.jpg" alt="messi-wallpaper" />
+            </figure>
+
+
+            <div class="text-center flex flex-col md:gap-10 fade-section">
+
+                <h2 class="text-[10px] mb-6 text-center card" id="card2">Stay warm, stay fit, Our winter workout
+                    <br>wear blends
+                    insulation with flexibility to <br>keep you going in the toughest <br>conditions.
+                </h2>
+
+
+                <!--hover gallery with card-->
+                <div class="card card-sm bg-base-200 max-w-80 fade-section shadow">
+                    <figure class="hover-gallery">
+                        <img
+                            src="img/1213964-fans-marvel-at-jude-bellinghams-stunning-solo-goal-and-vinicius-jr-loved-it-so-much-he-took-imaginary-picture.jpg">
+                        <img src="img/real1.jpg">
+                        <img src="img/real2.jpg">
+                        <img src="img/real3.jpg">
+                    </figure>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Sponsors and featured campaigns section -->
+    <section
+        class="fade-section w-full h-auto   tracking-tight leading-none  overflow-hidden sm:h-fit py-10 px-4 md: h-[96vh] ">
+        <div class="flex flex-col gap-5 md:flex-row items-center justify-center gap-20">
+            <!---flex1-->
+            <div class="flex flex-col gap-5">
+                <p class="text-[8px] font-bold">Our Top Sponsors</p>
+                <h2 class="text-[30px] font-bold">TOP SOCCER KITS <span class="text-blue-400"
+                        style="font-family:cursive;"> FOR</span> <br>
+                    <span class="text-blue-400" style="font-family:cursive;">PEAK</span> PERFORMANCE
+                </h2>
+                <div style="background-image: url(img/add.png);"
+                    class="rounded-xl w-[300px] h-[70vh] bg-cover bg-no-repeat relative ">
+                    <h2 class="text-[30px] font-semibold text-white absolute top-10 left-5 opacity-80">TOP <br> SOCCER
+                        <br>KIT FOR <br> PEAK <br>PERFORMA <br>NCE!
+                    </h2>
+                </div>
+            </div>
+            <!--flex2-->
+            <div class="flex flex-col gap-25">
+                <p class="text-[8px] font-bold text-center">Discover the best of our collection designed <br> to Power
+                    your soccer dreams </p>
+
+                <div style="background-image: url(img/nike.png);"
+                    class="rounded-xl w-[300px] h-[70vh] bg-cover bg-no-repeat relative ">
+                    <h2 class="text-[25px] font-semibold text-white absolute top-50 left-5 opacity-80">LATEST <br>STYLES
+                        AND <br>INNOVATIONS <br>IN SOCCER <br> WORLD. </h2>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Product carousel section for the latest arrivals and collections -->
+    <section
+        class="fade-section w-full h-auto   tracking-tight leading-none  overflow-hidden sm:h-fit py-4 px-4 md: h-[96vh] "
+        id="product1">
+
+        <div>
+
+            <!---trying the carousel concept-->
+            <div class="carousel w-full">
+                <div class="carousel-item w-full flex flex-col" id="carl1">
+                    <header class="flex justify-between">
+                        <p class="text-[8px] font-bold">NEW ARRIVAL</p>
+                        <h2 class=" font-semibold md:text-[30px]">FRESH FITS FOR YOUR <br> NEXT GAME! </h2>
+                        <P class="text-[8px] font-bold">ALL BRANDS</P>
+                    </header>
+                    <!----grid div-->
+                    <div
+                        class=" grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-5 product-grid  js-products-grid">
+                    </div>
+
+                </div>
+                <!----2nd carousel div-->
+                <div class="carousel-item w-full flex flex-col" id="carl2">
+                    <!---nav-->
+                    <div class="navbar bg-base-100  shadow-sm">
+                        <div class="flex-1">
+                            <a class="btn btn-ghost text-xl">VEXO</a>
+                        </div>
+                        <div class="flex gap-2">
+                            <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                            <div class="dropdown dropdown-end">
+                                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                                    <div class="w-10 rounded-full">
+                                        <img alt="Tailwind CSS Navbar component"
+                                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                    </div>
+                                </div>
+                                <ul tabindex="-1"
+                                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                                    <li>
+                                        <a class="justify-between">
+                                            Profile
+                                            <span class="badge">New</span>
+                                        </a>
+                                    </li>
+                                    <li><a>Settings</a></li>
+                                    <li><a>Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-5 productGrid1 js-product2-grid">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---carousel selector-->
+        <div class="flex w-full justify-center gap-2 py-2">
+            <a href="#carl1" class="btn btn-xs">1</a>
+            <a href="#carl2" class="btn btn-xs">2</a>
+        </div>
+
+
+
+        </div>
+
+    </section>
+
+    <section class="fade-section w-full h-auto  tracking-tight leading-none  overflow-hidden sm:h-fit  md: h-[96vh] ">
+        <!---Featured collection section-->
+        <section class="bg-base-100 py-5" id="accessories">
+            <div class="container mx-auto px-6">
+
+                <div class="grid lg:grid-cols-3 gap-6">
+
+                    <!-- Left Content -->
+                    <div class="flex flex-col justify-center">
+
+                        <p class="text-lime-500 uppercase font-bold text-[10px]">
+                            Featured Accessories
+                        </p>
+
+                        <h2 class="text-3xl font-bold mt-3">
+                            Elevate Your Game
+                        </h2>
+
+                        <p class="text-gray-500 mt-4 max-w-sm text-[10px]">
+                            Discover our most premium kits and trainingwear,
+                            crafted for champions.
+                        </p>
+
+                        <a href="#product1"
+                            class="btn btn-neutral w-fit mt-6 text-[10px] shadow hover:-translate-y-2 transition-all">
+                            View Collection →
+                        </a>
+
+                    </div>
+
+                    <!-- Main Product -->
+                    <div
+                        class="relative rounded-3xl overflow-hidden bg-black min-h-[300px] shadow hover:-translate-y-2 transition-all">
+
+                        <img src="./img/products/access1.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-80">
+
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/70"></div>
+
+                        <div class="relative z-10 p-8 text-white">
+
+                            <h3 class="text-xl font-bold">
+                                Nike Academy team backpack
+                            </h3>
+
+                            <p class="text-lime-400 text-[10px] mt-3">
+                                $46.97
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right Cards -->
+                    <div class="flex flex-col gap-6">
+
+                        <div
+                            class="relative rounded-3xl overflow-hidden bg-black min-h-[100px] shadow hover:-translate-y-2 transition-all">
+
+                            <img src="./img/products/access2.jpg"
+                                class="absolute inset-0 w-full h-full object-cover opacity-80">
+
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/70"></div>
+
+                            <div class="relative z-10 p-8 text-white">
+
+                                <h3 class="text-xl font-bold">
+                                    Nike Guard Stay 2
+                                </h3>
+
+                                <p class="text-lime-400 text-xs mt-3">
+                                    $11
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="relative rounded-3xl overflow-hidden bg-black min-h-[100px] shadow hover:-translate-y-2 transition-all">
+
+                            <img src="./img/products/access3.jpg"
+                                class="absolute inset-0 w-full h-full object-cover opacity-80">
+
+                            <div class="absolute inset-0 bg-gradient-to-r from-black/70"></div>
+
+                            <div class="relative z-10 p-8 text-white">
+
+                                <h3 class="text-xl font-bold">
+                                    Nike Phantom
+                                    Dynamic Fit Soccer Goalkeeper Gloves
+                                </h3>
+
+                                <p class="text-lime-400 text-xs mt-3">
+                                    $136.97
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!---best seller section-->
+        <section class="py-5">
+
+            <div class="container mx-auto px-6">
+
+                <h2 class="text-lime-500 uppercase font-bold text-[10px]">
+                    Best Sellers
+                </h2>
+
+                <div class=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-3 js-product3-grid">
+
+                    <!-- Product Card -->
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+       
+
+        <!----brand story section-->
+        <section class="bg-black text-white py-9">
+
+            <div class="container mx-auto px-6
+    flex gap-20 items-center">
+
+                <!-- Image -->
+
+                <div>
+                    <img src="./img/foot.jpg" class="rounded-3xl w-[180px]">
+                </div>
+
+                <!-- Text -->
+
+                <div class="flex gap-10">
+                    <div>
+
+                        <p class="text-lime-400 text-[15px] uppercase">
+                            Built On Passion
+                        </p>
+
+                        <h2 class="text-4xl font-bold text-[15px] mt-4">
+                            More Than
+                            A Brand
+                        </h2>
+
+                        <p class="text-gray-400 text-[10px] mt-6">
+                            VEXO is built for athletes who live
+                            for the game. <br> We combine innovation, style <br> and performance to help you be your
+                            best
+                            <br>
+                            on and off the pitch
+                        </p>
+
+                        <p class="text-gray-400 text-[10px] mt-6">
+                            LEARN OUR STORY ->
+                        </p>
+
+                    </div>
+
+                    <div class="space-y-8 mt-10">
+
+                        <div>
+                            <h3 class="font-bold text-[15px]">
+                                Performance First
+                            </h3>
+
+                            <p class="text-gray-400 text-[10px]">
+                                Engineered for peak performance.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-[15px]">
+                                Premium Quality
+                            </h3>
+
+                            <p class="text-gray-400 text-[10px]">
+                                Durable materials built to last.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-[15px]">
+                                Designed To Inspire
+                            </h3>
+
+                            <p class="text-gray-400 text-[10px]">
+                                Modern sportswear culture.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!---news letter selection-->
+        <section class="bg-lime-100 py-5">
+
+            <div class="container mx-auto px-6
+    flex flex-col lg:flex-row
+    justify-between items-center gap-6">
+
+                <div>
+
+                    <h2 class="text-2xl font-bold">
+                        Join The VEXO Club
+                    </h2>
+
+                    <p class="text-[10px]">
+                        Get exclusive offers and early access.
+                    </p>
+
+                </div>
+
+                <div class="join ">
+
+                    <input class="text-[10px] input input-bordered join-item" placeholder="Enter your email">
+
+                    <button class="btn btn-neutral join-item text-[10px]">
+                        Subscribe
+                    </button>
+
+                </div>
+
+            </div>
+            <audio id="bgMusic" loop>
+
+                <source src="Mystery Lady ft. Don Toliver (From The Late Late Show with James Corden _ 2021).mp3"
+                    type="audio/mpeg">
+
+            </audio>
+            <button id="musicBtn"
+                class="fixed bottom-6 right-6 bg-[#12284c] text-white px-5 py-3 rounded-full shadow-lg">
+
+                🎵 Play Music
+
+            </button>
+        </section>
+        <!---footer-->
+        <footer class="footer p-10 py-4 bg-neutral text-neutral-content flex justify-between ">
+
+            <aside>
+
+                <h2 class="text-3xl font-black">
+                    VEXO
+                </h2>
+
+                <p class="text-[10px]">
+                    Premium football apparel
+                    designed for champions.
+                </p>
+
+            </aside>
+
+            <nav class="text-[10px]">
+
+                <h6 class="footer-title text-[15px]">
+                    Shop
+                </h6>
+
+                <a class="link link-hover">Men</a>
+                <a class="link link-hover">Women</a>
+                <a class="link link-hover">Accessories</a>
+
+            </nav>
+
+            <nav class="text-[10px]">
+
+                <h6 class="footer-title text-[15px]">
+                    Collections
+                </h6>
+
+                <a class="link link-hover">New Arrivals</a>
+                <a class="link link-hover">Trainingwear</a>
+                <a class="link link-hover">Lifestyle</a>
+
+            </nav>
+
+            <nav class="text-[10px]">
+
+                <h6 class="footer-title text-[15px]">
+                    Help
+                </h6>
+
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Shipping</a>
+                <a class="link link-hover">FAQ</a>
+
+            </nav>
+
+        </footer>
+
+    </section>
+
+
+    <script src="data/cart.js"></script>
+    <script type="module" src="script/fitness.js"></script>
+    <script src="fitness2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</body>
+
+</html>
