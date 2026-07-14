@@ -174,13 +174,13 @@ export const products2 = [
 export const products3 = [
     {
         id: "sec-neckwarmer-012",
-        image: "/img/products/access4.jpg",
+        image: "../img/products/access4.jpg",
         name: "  Nike Academy Dri-FIT Soccer Neck Warmer",
         priceCents: 22,
     },
     {
         id: "sec-lowTopsoccer-12",
-        image: "/img/products/access5.jpg",
+        image: "../img/products/access5.jpg",
         name: `  Nike Tiempo Mestro Academy <br>
                                 <br>
                                 <span class="opacity-60"> Artificial Grass Low-top soccer Cleats</span>` ,
@@ -188,7 +188,7 @@ export const products3 = [
     },
      {
         id: "sec-highKneeSoccerSocks-12",
-        image: "/img/products/access6.jpg",
+        image: "../img/products/access6.jpg",
         name: `   Nike Strike <br>
                                 <br>
                                 <span class="opacity-60"> Knee High Soccer-socks</span>` ,
@@ -196,7 +196,7 @@ export const products3 = [
     },
      {
         id: "sec-rollerbag-12",
-        image: "/img/products/access7.jpg",
+        image: "../img/products/access7.jpg",
         name: `   Nike CLub Team <br>
                                 <br>
                                 <span class="opacity-60"> Roller Bag (120l)</span>` ,
@@ -204,7 +204,7 @@ export const products3 = [
     },
      {
         id: "sec-socccerBall-12",
-        image: "/img/products/access8.jpg",
+        image: "../img/products/access8.jpg",
         name: `    Nike Academy <br>
                                 <br>
                                 <span class="opacity-60"> Soccer Ball</span>` ,
@@ -212,7 +212,7 @@ export const products3 = [
     },
         {
         id: "sec-goalkeeperSocceer-12",
-        image: "/img/products/access9.jpg",
+        image: "../img/products/access9.jpg",
         name: `      Nike Match Jr <br>
                                 <br>
                                 <span class="opacity-60">Big kids'Goalkeeper Soccer GLoves</span>` ,
