@@ -47,6 +47,68 @@ const updateTotalPrice = () => {
   totalPriceElement.textContent = `$${total.toFixed(2)}`;
 };
 
+// Calculate and update subtotal, save amount, and total price
+const updateOrderSummary = () => {
+  const items = getCartItems() || [];
+
+  console.log("Cart items:", items); // DEBUG
+
+  let subtotal = 0;
+  let savings = 0;
+
+  items.forEach((item) => {
+    if (!item) return;
+
+    const quantity = item.quantity || 1;
+
+    // Get priceCents (CURRENT price - what user pays)
+    let priceCents = parseFloat(item.priceCents);
+    if (isNaN(priceCents) || priceCents === undefined) {
+      priceCents = parseFloat(item.price?.toString().replace("$", "")) || 0;
+    }
+
+    // Get originalPrice (original value before discount)
+    let originalPrice = parseFloat(item.originalPrice);
+    if (isNaN(originalPrice) || originalPrice === undefined) {
+      originalPrice = priceCents;
+    }
+
+    console.log(
+      `Item: ${item.title}, priceCents: ${priceCents}, originalPrice: ${originalPrice}, qty: ${quantity}`,
+    ); // DEBUG
+
+    // Subtotal = CURRENT prices (what you pay)
+    subtotal += priceCents * quantity;
+
+    // Savings = the discount amount
+    const itemSavings = originalPrice - priceCents;
+    savings += itemSavings * quantity;
+  });
+
+  console.log(
+    `Subtotal: ${subtotal}, Savings: ${savings}, Total: ${subtotal + savings}`,
+  ); // DEBUG
+
+  // Total = Subtotal + Savings (original prices before discount)
+  const total = subtotal + savings;
+
+  // Update displays
+  const subtotalEl = document.querySelector(".js-subtotal");
+  if (subtotalEl) {
+    subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+  }
+
+  const saveEl = document.querySelector(".js-save");
+  if (saveEl) {
+    saveEl.textContent = `-$${savings.toFixed(2)}`;
+  }
+
+  const totalEl = document.querySelector(".total-price");
+  if (totalEl) {
+    totalEl.textContent = `$${total.toFixed(2)}`;
+  }
+};
+
 // Remove a cart item by ID and refresh the UI/storage.
 const removeCartItem = (itemId) => {
   const items = getCartItems().filter((item) => item.id !== itemId);
@@ -76,7 +138,7 @@ const renderCartItems = (items) => {
             <div class="card-body">
                 <p class="text-center opacity-50">Your cart is empty. Add items from the shop to see them here.</p>
             </div>`;
-    updateTotalPrice();
+    updateOrderSummary();
     return;
   }
 
@@ -128,7 +190,7 @@ const renderCartItems = (items) => {
     });
   });
 
-  updateTotalPrice();
+  updateOrderSummary();
 };
 
 // Ensure each product has a stable ID, falling back to a random string if needed.
@@ -145,6 +207,8 @@ const addToCart = (productBox) => {
   const productPrice =
     productBox.querySelector(".price")?.textContent.trim() || "$0";
   const productId = normalizeProductId(productBox);
+  const priceCents = parseFloat(productBox.dataset.priceCents) || 0;
+  const originalPrice = parseFloat(productBox.dataset.originalPrice) || 0;
 
   const cartItems = getCartItems();
   const existingItem = cartItems.find((item) => item.id === productId);
@@ -157,6 +221,8 @@ const addToCart = (productBox) => {
       title: productTitle,
       price: productPrice,
       image: productImgSrc,
+      priceCents: priceCents,
+      originalPrice: originalPrice,
       quantity: 1,
     });
   }

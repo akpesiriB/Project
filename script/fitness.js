@@ -1,12 +1,12 @@
 import { products, products2, products3 } from "../data/products.js";
 
-let productHTML = '';
+let productHTML = "";
 
 //looping through each products array to generate html for each products
 products.forEach((product) => {
-    productHTML += `
+  productHTML += `
               <!---prototype grid-->
-                        <div class="card card-sm bg-base-200 shadow hover:-translate-y-2 transition-all product-box group relative overflow-hidden">
+                        <div class="card card-sm bg-base-200 shadow hover:-translate-y-2 transition-all product-box group relative overflow-hidden" data-price-cents="${product.priceCents}" data-original-price="${product.originalPrice}">
                             <figure><img src="${product.image}" alt="mes1"></figure>
                             <!---overlay right -->
                             <div
@@ -26,22 +26,22 @@ products.forEach((product) => {
                                     <p class="text-[10px] opacity-40">performance</p>
                                 </div>
                             </div>
-                        </div>`
+                        </div>`;
 });
 
 //parse the generated html to the main html page
-const productGrid = document.querySelector('.js-products-grid');
+const productGrid = document.querySelector(".js-products-grid");
 if (productGrid) {
-    productGrid.innerHTML = productHTML;
+  productGrid.innerHTML = productHTML;
 }
 //loop for product 2
-let product2HTML = '';
+let product2HTML = "";
 
 //looping through each products array to generate html for each products
 products2.forEach((product) => {
-    product2HTML += `
+  product2HTML += `
       <!---prototype grid-->
-                        <div class="card card-sm bg-base-200 shadow hover:-translate-y-2 transition-all product-box group relative overflow-hidden">
+                        <div class="card card-sm bg-base-200 shadow hover:-translate-y-2 transition-all product-box group relative overflow-hidden" data-price-cents="${product.priceCents}" data-original-price="${product.originalPrice}">
                             <figure><img src="${product.image}" alt="mes1"></figure>
                             <!---overlay right -->
                             <div
@@ -62,21 +62,21 @@ products2.forEach((product) => {
                                 </div>
                             </div>
                         </div>
-    `
+    `;
 });
 //parse the generated html to the main html page
-const productGrid1 = document.querySelector('.js-product2-grid');
+const productGrid1 = document.querySelector(".js-product2-grid");
 if (productGrid1) {
-    productGrid1.innerHTML = product2HTML;
+  productGrid1.innerHTML = product2HTML;
 }
 
 //loop for product 3
-let product3HTML = '';
+let product3HTML = "";
 
 //looping through each products array to generate html for each products
 products3.forEach((product) => {
-    product3HTML += `
-      <div class="card  bg-base-100 shadow hover:-translate-y-2 transition-all product-box">
+  product3HTML += `
+      <div class="card  bg-base-100 shadow hover:-translate-y-2 transition-all product-box" data-price-cents="${product.priceCents}" data-original-price="${product.originalPrice}">
 
                         <figure class="">
                             <img src="${product.image}">
@@ -97,44 +97,36 @@ products3.forEach((product) => {
                         </div>
 
                     </div>
-    `
+    `;
 });
 
 //parse the generated html to the main html page
-const productGrid2 = document.querySelector('.js-product3-grid');
+const productGrid2 = document.querySelector(".js-product3-grid");
 if (productGrid2) {
-    productGrid2.innerHTML = product3HTML;
+  productGrid2.innerHTML = product3HTML;
 }
-
-
-
-
-
-
 
 // Activate sections that use fade-in animation when they scroll into view
-const fadeSections = document.querySelectorAll('.fade-section');
+const fadeSections = document.querySelectorAll(".fade-section");
 
-if ('IntersectionObserver' in window) {
-    const fadeObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -80px 0px',
-    });
+if ("IntersectionObserver" in window) {
+  const fadeObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -80px 0px",
+    },
+  );
 
-    fadeSections.forEach((section) => fadeObserver.observe(section));
+  fadeSections.forEach((section) => fadeObserver.observe(section));
 } else {
-    // Fallback for older browsers: reveal all sections immediately
-    fadeSections.forEach((section) => section.classList.add('active'));
+  // Fallback for older browsers: reveal all sections immediately
+  fadeSections.forEach((section) => section.classList.add("active"));
 }
-
-
-
-
-
