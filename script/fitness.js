@@ -10,8 +10,8 @@ products.forEach((product) => {
                             <figure><img src="${product.image}" alt="mes1"></figure>
                             <!---overlay right -->
                             <div
-                                class="absolute inset-0 flex items-start justify-start p-3 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button type="button" class="btn btn-secondary w-2 h-6 hover:cursor-pointer add-cart" title="Add to Cart"><i
+                                class="absolute inset-0 flex items-start justify-start p-3 bg-black/10 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button type="button" class="btn btn-ghost w-2 h-6 hover:cursor-pointer add-cart" title="Add to Cart"><i
                                         class="fa-solid fa-cart-arrow-down"></i></button>
                             </div>
                             <div class="card-body">
@@ -45,7 +45,7 @@ products2.forEach((product) => {
                             <figure><img src="${product.image}" alt="mes1"></figure>
                             <!---overlay right -->
                             <div
-                                class="absolute inset-0 flex items-start justify-start p-3 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                class="absolute inset-0 flex items-start justify-start p-3 bg-black/10 opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <button type="button" class="btn btn-secondary w-2 h-6 hover:cursor-pointer add-cart" title="Add to Cart"><i
                                         class="fa-solid fa-cart-arrow-down"></i></button>
                             </div>
